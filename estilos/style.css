@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*
     Paleta de cores
     Cimento queimado: #323640;
@@ -8,3 +12,140 @@
     Cinza Claro: #BFBFBF;
     Preto-acizentado: #0D0D0D;
 */
+:root {
+    /* Variáveis para cores */
+    --cimento: #323640;
+    --marrom: #8C6F4A;
+    --branco: #F2F2F2;
+    --cinza: #BFBFBF;
+    --preto: #0D0D0D;
+    /* Variáveis para fonte */
+    --titulo: "Libre Caslon Text", serif;
+    --texto: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cinza);
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    
+}
+
+section#login{
+    position: absolute;
+    background-color: var(--branco);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 520px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+}
+
+div#imagem {
+    background-image: url(../imagens/fundo.jpg);
+    background-position: center center;
+    height: 200px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+
+div#formulario {
+    padding: 10px;
+}
+
+div#formulario > h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--titulo);
+    margin: 5px 0px;
+    
+}
+
+div#formulario > p {
+    font-family: var(--texto);
+    text-align: left;
+    font-size: 0.8em;
+    font-weight: light;
+    margin-bottom: 5px;
+}
+
+div.campo {
+    background-color: var(--marrom);
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+div.campo i {
+    padding: 5px;
+    width: 40px;
+    font-size: 1.9em;
+    color: white;
+    transform: translateY(15%);
+}
+
+div.campo > input {
+    text-align: left;
+    font-family: var(--texto);
+    font-size: 0.9em;
+    height: 35px;
+    width: calc(100% - 50px);
+    border-radius: 8px;
+    padding: 4px;
+    border: 0px;
+    transform: translateY(-20%);
+    
+}
+
+div.botao {
+    display: flex;
+    align-items: center;    
+}
+/* Botão entrar */
+form > input[type=submit] {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 0px;
+    background-color: var(--cimento);
+    color: white;
+    font-family: var(--texto);
+    font-size: 1.3em;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-bottom: 5px;
+} 
+form > input[type=submit]:hover {
+    background-color: #22272c;
+}
+/* Bot]ap esqueci a senha */
+form > a.botao {
+    display: block;
+    width: 100%;
+    height: 40px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--cimento);
+    background-color: white;
+    border: 1px solid var(--cimento);
+    border-radius: 7px;
+}
+
+form > a.botao:hover {
+    background-color: var(--cimento);
+    color: var(--branco);
+}
+
+form > a > i {
+    transform: translateY(20%);
+}
