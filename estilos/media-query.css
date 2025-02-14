@@ -1,20 +1,46 @@
 @charset "UTF-8";
 
 @media screen and (min-width: 768px){
-    
+    /* Alinha a imagem á esquerda */
     section#login{
-        display: inline;
-        width: 430px;
-        height: 290px;
-
+        display: flex;
+        flex-direction: row;
+        width: 631.19px;
+        height: 280px;
+        border-radius: 20px;
     }
 
     div#imagem {
-        display: inline;
-        background-image: url(../imagens/fundo.jpg);
-        background-position: center center;
         height: 100%;
-        width: 100px;
-        border-radius: 20px 20px 0px 0px;
+        width: 300px;
+        border-radius: 20px 0px 0px 20px;
+    }
+
+}
+
+@media screen and (min-width: 992px){
+    /* Alinha a imagem á direita */
+    section#login{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 950px;
+        height: 350px;
+        
+    }
+
+    div#imagem {
+        height: 100%;
+        width: 850px;
+        border-radius: 0px 20px 20px 0px;
+    }
+
+    div#formulario > h1 {
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    div#formulario > p {
+        font-size: 1em;
+        margin-bottom: 15px;
     }
 }
