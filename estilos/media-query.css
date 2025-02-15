@@ -1,45 +1,74 @@
 @charset "UTF-8";
 
-@media screen and (min-width: 768px){
-    /* Alinha a imagem á esquerda */
-    section#login{
-        display: flex;
-        flex-direction: row;
-        width: 631.19px;
-        height: 280px;
-        border-radius: 20px;
-    }
-
-    div#imagem {
-        height: 100%;
-        width: 300px;
-        border-radius: 20px 0px 0px 20px;
-    }
-
+:root {
+    /* Variáveis para cores */
+    --cimento: #323640;
+    --marrom: #8C6F4A;
+    --branco: #F2F2F2;
+    --cinza: #BFBFBF;
+    --preto: #0D0D0D;
+    /* Variáveis para fonte */
+    --titulo: "Libre Caslon Text", serif;
+    --texto: "Montserrat", sans-serif;
 }
 
-@media screen and (min-width: 992px){
-    /* Alinha a imagem á direita */
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 992px) {  
+    body{
+        background-image: linear-gradient(to top, var(--cimento), var(--cinza) );
+    }
     section#login{
-        display: flex;
-        flex-direction: row-reverse;
+        width: 80vw;
+        height: 280px;
+    }
+    
+    section#login > div#imagem {
+    /* Alinha a imagem á esquerda */
+        float: left;
+        height: 100%;
+        width: 30%;
+    }
+
+    section#login > div#formulario {
+    /* Alinha o formulário á direita */
+        float: right;
+        width: 70%;
+    }
+}
+
+
+
+/* DESKTOP */
+@media screen and (min-width: 992px){
+    body{
+        background-image: linear-gradient(to top, var(--cimento), var(--cinza) );
+    }
+
+    section#login{
         width: 950px;
-        height: 350px;
         
     }
 
-    div#imagem {
+    section#login > div#imagem {
+    /* Alinha a imagem á direita */
+        float: right;
+        width: 50%;
         height: 100%;
-        width: 850px;
         border-radius: 0px 20px 20px 0px;
     }
 
-    div#formulario > h1 {
+    section#login > div#formulario {
+    /* Alinha o formulário á esquerda */
+        float: left;
+        width: 50%;
+    }
+
+    section#login > div#formulario > h1 {
         font-size: 2em;
         margin-bottom: 20px;
     }
 
-    div#formulario > p {
+    section#login > div#formulario > p {
         font-size: 1em;
         margin-bottom: 15px;
     }

@@ -10,20 +10,23 @@
 </head>
 <body>
     <main>
+        <!-- Caixa de Login -->
         <section id="login">
+            <!-- Imagem da tela de Login -->
             <div id="imagem">
             </div>
+            <!-- Parte do formulário -->
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça Login para acessar sua conta para poder aproveitar nosso aplicativo.</p>
                 <form action="login.php" method="post" autocomplete="on">
                     <div class="campo">
                         <label for="email"><i class="material-symbols-outlined">person</i></label>
-                        <input type="text" name="email" id="email" placeholder="Digite seu e-mail">
+                        <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required autocomplete="email" maxlength="40">
                     </div>
                     <div class="campo">
                         <label for="senha"><i class="material-symbols-outlined">key</i></label>
-                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required autocomplete="current-password" minlength="8" maxlength="20">
                     </div>
                         <input type="submit" value="Entrar">
                         <a href="#" class="botao">Esqueci a senha <i class="material-symbols-outlined">mail</i></a>
