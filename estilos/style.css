@@ -51,12 +51,13 @@ section#login{
     margin: auto;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
     border-radius: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
     overflow: hidden;
-    transition: width .5s, height .5s;
+    /* transição de tamanho */
+    transition: width .3s, height .3s;
     transition-timing-function: ease;
+    transform: translate(-50%,-50%);
     
 }
 
@@ -90,37 +91,36 @@ div#formulario > p {
     margin-bottom: 5px;
 }
 
-div.campo {
+form > div.campo {
     background-color: var(--marrom);
+    display: block;
+    width: 100%;
+    height: 40px;
     border-radius: 10px;
-    margin-bottom: 5px;
+    margin: 5px 0px;
 }
 
 div.campo i {
     padding: 5px;
+    font-size: 2em;
     width: 40px;
-    font-size: 1.9em;
     color: white;
-    transform: translateY(15%);
+    transform: translateY(-5%);
 }
 
-div.campo > input {
+form > div.campo > input {
     text-align: left;
     font-family: var(--texto);
     font-size: 0.9em;
-    height: 35px;
+    height: 30px;
     width: calc(100% - 50px);
     border-radius: 8px;
     padding: 4px;
     border: 0px;
-    transform: translateY(-20%);
+    transform: translateY(-40%);
     
 }
 
-div.botao {
-    display: flex;
-    align-items: center;    
-}
 /* Botão entrar */
 form > input[type=submit] {
     display: block;
@@ -129,7 +129,7 @@ form > input[type=submit] {
     border: 0px;
     background-color: var(--cimento);
     color: white;
-    font-family: var(--texto);
+    font-family: var(--titulo);
     font-size: 1.3em;
     border-radius: 7px;
     cursor: pointer;
@@ -138,7 +138,7 @@ form > input[type=submit] {
 form > input[type=submit]:hover {
     background-color: #22272c;
 }
-/* Bot]ap esqueci a senha */
+/* Botão esqueci a senha */
 form > a.botao {
     display: block;
     width: 100%;
@@ -156,6 +156,6 @@ form > a.botao:hover {
     color: var(--branco);
 }
 
-form > a > i {
+form > a.botao > i {
     transform: translateY(20%);
 }

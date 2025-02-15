@@ -46,7 +46,7 @@
 
     section#login{
         width: 950px;
-        
+        height: 350px;
     }
 
     section#login > div#imagem {
@@ -65,11 +65,11 @@
 
     section#login > div#formulario > h1 {
         font-size: 2em;
-        margin-bottom: 20px;
+        margin: 20px 0px;
     }
 
     section#login > div#formulario > p {
         font-size: 1em;
-        margin-bottom: 15px;
+        margin: 15px 0px;
     }
 }
